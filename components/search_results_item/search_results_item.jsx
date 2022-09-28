@@ -28,7 +28,9 @@ import BotBadge from 'components/widgets/badges/bot_badge';
 import InfoSmallIcon from 'components/widgets/icons/info_small_icon';
 import PostPreHeader from 'components/post_view/post_pre_header';
 import ThreadFooter from 'components/threading/channel_threads/thread_footer';
+import ReactionList from 'components/post_view/reaction_list';
 import EditPost from 'components/edit_post';
+
 import PriorityLabel from 'components/post_priority/post_priority_label';
 
 import Constants, {AppEvents, Locations} from 'utils/constants';
@@ -493,6 +495,9 @@ export default class SearchResultsItem extends React.PureComponent {
                                     />
                                 </div>
                                 {fileAttachment}
+                                <ReactionList
+                                    post={post}
+                                />
                             </div>
                             {hasCRTFooter ? (
                                 <ThreadFooter

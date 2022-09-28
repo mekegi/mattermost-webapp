@@ -30,4 +30,5 @@ export type SearchParameter = {
     page: number;
     per_page: number;
     include_deleted_channels: boolean;
+    include_reactions: boolean;
 }
